@@ -1,8 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import os
 import time
 import telebot
 from telebot import types
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
 
 
 TOKEN = "2003097102:AAHcvmuMAIPRNzlKRfVFMsjegOQIOYUslfw"
@@ -12,9 +19,7 @@ def welcome(message):
     bot.send_message(message.chat.id, "<b>ну здарова ебать)</b>", parse_mode='html')
     print(message.chat.id)
 
-chromeDriverPATH = "chromedriver.exe"
-driver = webdriver.Chrome(chromeDriverPATH)
-
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get("https://binarium.global")
 time.sleep(1)
 search = driver.find_element_by_xpath(
