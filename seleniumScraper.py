@@ -33,8 +33,8 @@ time.sleep(10)
 globalWindow = driver.window_handles[0]
 authWindow = driver.window_handles[1]
 driver.switch_to.window(authWindow)
-googleAuthFirst = driver.find_element_by_name("identifier")
 time.sleep(10)
+googleAuthFirst = driver.find_element_by_name("identifier")
 googleAuthFirst.send_keys("dimamatvej729")
 googleAuthFirst.send_keys(Keys.ENTER)
 time.sleep(10)
