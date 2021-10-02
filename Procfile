@@ -1,1 +1,1 @@
-worker: python seleniumScraper.py
+web: python seleniumScraper.py
