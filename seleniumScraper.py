@@ -34,8 +34,7 @@ globalWindow = driver.window_handles[0]
 authWindow = driver.window_handles[1]
 driver.switch_to.window(authWindow)
 time.sleep(10)
-bot.send_message(-547367698, "test-breakpoint")
-googleAuthFirst = driver.find_element_by_name("identifier")
+googleAuthFirst = driver.find_element_by_xpath("//*[@id="identifierId"]")
 googleAuthFirst.send_keys("dimamatvej729")
 googleAuthFirst.send_keys(Keys.ENTER)
 time.sleep(10)
