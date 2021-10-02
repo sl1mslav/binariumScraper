@@ -21,7 +21,7 @@ def welcome(message):
 
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get("https://binarium.global")
-time.sleep(1)
+time.sleep(10)
 search = driver.find_element_by_xpath(
     "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-header/div/div/div[1]/button[1]")
 search.click()
