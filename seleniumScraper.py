@@ -22,14 +22,16 @@ def welcome(message):
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get("https://binarium.global")
 time.sleep(20)
+print(driver.current_url)
 #search = driver.find_element_by_xpath(
 #    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-header/div/div/div[1]/button[1]")
 #search.click()
 time.sleep(10)
 googleButton = driver.find_element_by_xpath(
-    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[1]")
+    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[3]")
 googleButton.click()
 time.sleep(10)
+print(driver.current_url)
 globalWindow = driver.window_handles[0]
 authWindow = driver.window_handles[1]
 driver.switch_to.window(authWindow)
