@@ -35,7 +35,7 @@ authWindow = driver.window_handles[1]
 driver.switch_to.window(authWindow)
 time.sleep(10)
 print(driver.current_url)
-googleAuthFirst = driver.find_element_by_xpath('//*[@id="identifierId"]')
+googleAuthFirst = driver.find_element_by_name("identifier")
 googleAuthFirst.send_keys("dimamatvej729")
 googleAuthFirst.send_keys(Keys.ENTER)
 time.sleep(10)
