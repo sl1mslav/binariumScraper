@@ -23,8 +23,8 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 driver.get("https://binarium.global")
 time.sleep(20)
 search = driver.find_element_by_xpath(
-    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-header/div/div/div[1]/button[1]")
-search.click()
+#    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-header/div/div/div[1]/button[1]")
+#search.click()
 time.sleep(10)
 googleButton = driver.find_element_by_xpath(
     "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[3]")
