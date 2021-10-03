@@ -20,7 +20,7 @@ def welcome(message):
     bot.send_message(message.chat.id, "<b>ну здарова ебать)</b>", parse_mode='html')
     print(message.chat.id)
 
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 driver.get("https://binarium.global")
 time.sleep(20)
 print(driver.current_url)
@@ -29,7 +29,7 @@ print(driver.current_url)
 #search.click()
 time.sleep(10)
 googleButton = driver.find_element_by_xpath(
-    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[1]")
+    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[3]")
 print(googleButton.text)
 googleButton.click()
 time.sleep(10)
