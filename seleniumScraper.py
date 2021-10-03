@@ -28,7 +28,7 @@ print(driver.current_url)
 #search.click()
 time.sleep(10)
 googleButton = driver.find_element_by_xpath(
-    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[3]")
+    "/html/body/app-client/div/ng-component/app-sidebar/div/app-signup-social/div/div/div/a[1]")
 print(googleButton.text)
 googleButton.click()
 time.sleep(10)
